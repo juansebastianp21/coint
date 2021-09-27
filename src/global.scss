@@ -1,0 +1,14 @@
+$mainColor: #0fcf69;
+$secondColor: #000;
+$width: 768px;
+$warningColor: #ffd028;
+$dangerColor: #eb3f27;
+$successColor: #75fa83;
+$whiteColor: #fdfdfd;
+$darkColor: #0d0d0d;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content;
+    }
+}

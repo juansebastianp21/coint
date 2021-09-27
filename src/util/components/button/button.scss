@@ -1,0 +1,71 @@
+@import '../../../global.scss';
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.btn:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    color: $darkColor;
+}
+
+// Button colors and styles
+
+.btn--primary--solid {
+    background-color: $mainColor;
+    color: $darkColor;
+    border: none;
+}
+.btn--warning--solid {
+    background-color: $warningColor;
+    color: $whiteColor;
+    border: none;
+}
+.btn--danger--solid {
+    background-color: $dangerColor;
+    color: $whiteColor;
+    border: none;
+}
+.btn--success--solid {
+    background-color: $successColor;
+    color: $whiteColor;
+    border: none;
+}
+.btn--primary--outline {
+    background-color: transparent;
+    border: 2px solid $mainColor;
+    color: $mainColor;
+}
+.btn--warning--outline {
+    background-color: transparent;
+    border: 2px solid $warningColor;
+    color: $warningColor;
+}
+.btn--danger--outline {
+    background-color: transparent;
+    border: 2px solid $dangerColor;
+    color: $dangerColor;
+}
+.btn--success--outline {
+    background-color: transparent;
+    border: 2px solid $successColor;
+    color: $successColor;
+}
+
+// Button size
+
+.btn--small {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+.btn--medium {
+    padding: 15px 45px;
+    font-size: 22px;
+}

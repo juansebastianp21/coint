@@ -1,0 +1,106 @@
+@import '../../global.scss';
+
+.infoContainer {
+    color: $whiteColor;
+    background-color: $darkColor;
+
+    &.lightBg {
+        background-color: $whiteColor;
+    }
+
+    .infoWrapper {
+        display: grid;
+        z-index: 1;
+        height: 860px;
+        width: 100%;
+        max-width: 1100px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 24px;
+        justify-content: center;
+    }
+
+    .infoRow {
+        display: grid;
+        grid-auto-columns: minmax(auto, 1fr);
+        align-items: center;
+        grid-template-areas: 'col1 col2';
+
+        &.imgStart {
+            grid-template-areas: 'col2 col1';
+        }
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .column1 {
+            margin-bottom: 15px;
+            padding: 0 15px;
+            grid-area: col1;
+
+            .textWrapper {
+                max-width: 540px;
+                padding-top: 0;
+                padding-bottom: 60px;
+
+                .topLine {
+                    color: $mainColor;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 700;
+                    letter-spacing: 1.4px;
+                    text-transform: uppercase;
+                    margin-bottom: 16px;
+                }
+
+                .heading {
+                    margin-bottom: 24px;
+                    font-size: 48px;
+                    line-height: 1.1;
+                    font-weight: 600;
+                    color: $darkColor;
+
+                    &.lightText {
+                        color: $whiteColor;
+                    }
+                }
+
+                .subtitle {
+                    max-width: 440px;
+                    margin-bottom: 35px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $darkColor;
+
+                    &.lightTextDesc {
+                        color: $whiteColor;
+                    }
+                }
+
+                .btnWrapper {
+                    display: flex;
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        .column2 {
+            margin-bottom: 15px;
+            padding: 0 15px;
+            grid-area: col2;
+
+            .imgwrapper {
+                max-width: 555px;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
