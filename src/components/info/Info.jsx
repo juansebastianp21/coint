@@ -1,7 +1,6 @@
 import React from 'react';
 import './info.scss';
 import Button from '../../util/components/button/Button';
-import {ReactComponent as ReactLogo} from '../../images/svg-1.svg';
 
 function Info({
     id,

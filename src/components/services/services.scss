@@ -1,0 +1,79 @@
+@import '../../global.scss';
+
+.container {
+    color: $whiteColor;
+    background-color: $darkColor;
+    display: grid;
+    grid-template-columns: minmax(auto, 1100px);
+    justify-content: center;
+    .servicesWrapper {
+        z-index: 1;
+        height: 860px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(3, 26%);
+        grid-template-rows: 200px 340px;
+        grid-template-areas:
+            'title title title'
+            'item1 item2 item3';
+        grid-gap: 15px;
+
+        @include mobile {
+            height: auto;
+            padding: 50px 0;
+            grid-template-columns: 80%;
+            grid-template-rows: 80px 300px 300px 300px;
+            grid-gap: 20px;
+            grid-template-areas:
+                'title'
+                'item1'
+                'item2'
+                'item3';
+        }
+
+        .titleContainer {
+            grid-area: title;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item {
+            background: $whiteColor;
+            color: $darkColor;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .item img {
+            max-height: 34%;
+            margin-bottom: 20px;
+        }
+
+        .item h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .item p {
+            font-size: 14px;
+            text-align: center;
+            max-width: 80%;
+            font-weight: 400;
+        }
+
+        .item1 {
+            grid-area: item1;
+        }
+        .item2 {
+            grid-area: item2;
+        }
+        .item3 {
+            grid-area: item3;
+        }
+    }
+}
